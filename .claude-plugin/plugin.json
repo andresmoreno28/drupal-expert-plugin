@@ -1,0 +1,8 @@
+{
+  "name": "drupal-expert",
+  "version": "1.0.0",
+  "description": "Drupal 11 development expert — coding standards, best practices, SOLID/DRY/Clean Code, security, accessibility, and performance for any Drupal project.",
+  "author": {
+    "name": "Andres Moreno"
+  }
+}

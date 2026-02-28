@@ -1,0 +1,21 @@
+{
+  "name": "@anthropic-plugins/drupal-expert",
+  "version": "1.0.0",
+  "description": "Claude Code plugin: Drupal 11 development expert with coding standards, best practices, and automated validation.",
+  "keywords": [
+    "claude-code-plugin",
+    "drupal",
+    "drupal-11",
+    "coding-standards",
+    "sdc",
+    "recipes"
+  ],
+  "author": "Andres Moreno",
+  "license": "GPL-2.0-or-later",
+  "files": [
+    ".claude-plugin/",
+    "skills/",
+    "hooks/",
+    "agents/"
+  ]
+}
