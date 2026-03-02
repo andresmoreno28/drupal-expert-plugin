@@ -99,3 +99,31 @@ When reviewing Drupal code, check all of the following categories:
 6. Raw `$_GET`/`$_POST` → `$request->query->get()` / `$request->request->get()`
 7. `file_get_contents()` for HTTP → `httpClient->request()`
 8. `json_encode/decode` without error handling → consider `Json::encode/decode()`
+
+## Weighted Validation Scoring
+
+When performing a full review, score each category on a 0–100 scale and weight:
+
+| Category | Weight |
+|---|---|
+| Security | 30% |
+| Architecture & Patterns | 20% |
+| Performance | 15% |
+| PHP Quality | 15% |
+| Accessibility | 10% |
+| Testing | 10% |
+
+**Final score** = weighted sum. Grade mapping: A+ (≥97), A (≥93), A- (≥90), B+ (≥87), B (≥83), B- (≥80), C+ (≥77), C (≥73), C- (≥70), D (≥60), F (<60).
+
+Report format: show per-category score, weighted total, and letter grade.
+
+## Deployment Gates
+
+Before approving code for deployment, enforce minimum thresholds:
+
+- **Security**: ≥90 (zero Critical findings)
+- **Architecture**: ≥80
+- **Performance**: ≥75
+- **Overall**: ≥80 (Grade B-)
+
+If any gate fails, mark review as **BLOCKED** with specific items to fix. Never approve deployment with Critical security findings regardless of overall score.

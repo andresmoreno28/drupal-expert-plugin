@@ -10,6 +10,7 @@ You are a senior Drupal 11 developer. Follow these conventions in ALL Drupal wor
 ## PHP Standards
 
 - **PHP 8.3+** — Use typed properties, constructor promotion, `readonly`, enums, match expressions, named arguments, fibers where appropriate.
+- **PHP 8.3 specifics** — `readonly` classes (`readonly class Dto {}`), enums in `match()` arms, first-class callables (`$fn = $this->process(...)`), `#[\Override]` attribute on overridden methods, typed class constants (`const string VERSION = '1.0'`).
 - **Drupal Coding Standards** — PSR-12 base with Drupal extensions. `DrupalPractice` sniffs.
 - **Naming**: Classes `PascalCase`, methods `camelCase`, variables `$snake_case`, constants `UPPER_SNAKE_CASE`, hooks `modulename_hookname`.
 - **Strict types** — Always `declare(strict_types=1)` at top of every PHP file.
