@@ -240,5 +240,5 @@ For projects with design systems:
 
 - Mobile-first: start with mobile styles, add `@media (min-width: ...)` for larger
 - Use CSS Grid and Flexbox — no floats
-- Common breakpoints: 768px (tablet), 1024px (desktop), 1440px (wide)
+- Common breakpoints: 576px (sm), 768px (md), 992px (lg), 1200px (xl), 1400px (xxl) — Bootstrap 5 defaults. Use project CLAUDE.md breakpoints if defined.
 - Container queries supported in modern Drupal themes
